@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  
+  get '/login' => 'session#new', as: 'login'
+  post '/login' => 'session#create'
+  delete '/login' => 'session#destroy'
+
+  resources :users
+
   root 'pages#home'
 
   get 'pages/about'
