@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: MyText
+  capacity: 1
+  rows: 1
+
+two:
+  type: MyText
+  capacity: 1
+  rows: 1

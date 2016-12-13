@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  
+
+  resources :reservations
+  resources :flights
+  resources :airplanes
   get '/login' => 'session#new', as: 'login'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
-
+  get '/app' => 'flights#app', as: 'start_app'
   resources :users
 
   root 'pages#home'
