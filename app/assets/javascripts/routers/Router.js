@@ -16,9 +16,25 @@ app.Router = Backbone.Router.extend({
     appView.render();
   },
   showFlight: function(params) {
-    var flight = app.flights.get(parseInt(params));
-    var seatView = new app.SeatView({model: flight});
-    seatView.render();
+    app.reservations.url = '/flight_reservations/' + params;
+    app.flights.fetch();
+    app.reservations.fetch().done(function() {
+      var flight = app.flights.get(parseInt(params));
+      var seatView = new app.SeatView({model: flight});
+      var seatInputView = new app.SeatInputView();
+      seatInputView.render();
+      seatView.render();
+    });
+    window.setInterval(function() {
+    app.flights.fetch();
+    app.reservations.fetch().done(function() {
+      var flight = app.flights.get(parseInt(params));
+      var seatView = new app.SeatView({model: flight});
+      var seatInputView = new app.SeatInputView();
+      seatInputView.render();
+      seatView.render();
+    });
+  }, 5000);
 
   },
   error: function() {

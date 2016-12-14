@@ -14,7 +14,7 @@ app.FlightInputView = Backbone.View.extend({
     var toInput = this.$el.find("#to").val();
     var fromInput = this.$el.find("#from").val();
     var result1 = app.flights.where({departure: fromInput, destination: toInput});
-    var result = app.flights.where({});
+    // var result = app.flights.where({});
     console.log(result1);
     $("#flights").html("");
     _.each(result1, function(result) {

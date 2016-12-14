@@ -1,6 +1,9 @@
 <div id="app">
   App loaded within this
 </div>
+<div id="seatInput">
+
+</div>
 
 <script id="AppViewTemplate" type="html/template">
   <div id="flightForm">
@@ -25,5 +28,15 @@
   Seats should go here
   <div id="seat-map">
 
+  </div>
+</script>
+
+<script id="SeatInputViewTemplate" type="html/template">
+  <div id="seatDisplay">
+
+  </div>
+  <div id="buttonCont">
+    <button id="sendData">Click to fly</button>
+    <input type="hidden" value="<%= @current_user.id %>"/>
   </div>
 </script>

@@ -2,7 +2,12 @@ class FlightsController < ApplicationController
   before_action :set_flight, only: [:show, :edit, :update, :destroy]
 
   def app
+    @airplane = Airplane.new
+  end
 
+  def reservation
+    flight = Flight.find_by id: params["id"]
+    @reservations = flight.reservations
   end
 
   # GET /flights

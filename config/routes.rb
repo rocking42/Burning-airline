@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :reservations
   resources :flights
   resources :airplanes
+  get "/flight_reservations/:id" => 'flights#reservation', as: 'flight_reservations'
   get '/login' => 'session#new', as: 'login'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
