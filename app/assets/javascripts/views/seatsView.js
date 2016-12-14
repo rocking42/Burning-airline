@@ -12,7 +12,6 @@ app.SeatView = Backbone.View.extend({
   },
 
   render: function() {
-    console.log("app.flightInputView should be loaded");
     var seatTemplate = $("#SeatViewTemplate").html();
     this.$el.html(seatTemplate);
 
@@ -80,3 +79,6 @@ app.SeatView = Backbone.View.extend({
 
 }
 });
+
+// this.model.toJSON().all_seats[0].booked
+// this.model.toJSON().all_seats.length
