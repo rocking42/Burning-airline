@@ -13,6 +13,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery_seatchart
 //= require underscore
 //= require backbone
 //= require_tree ./models
