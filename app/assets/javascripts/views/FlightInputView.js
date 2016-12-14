@@ -10,17 +10,19 @@ app.FlightInputView = Backbone.View.extend({
   // Do this by using el or tagname
   // attach events
   // Have functions (render)
-  createSecret: function(e) {
-    // I want to select the text area and get the value of it
-    // var userInput = this.$el.find("textarea").val();
-    // var secret = new app.Secret({
-    //   content: userInput
-    // });
-    // secret.save().done(function() {
-    //   app.secrets.add(secret);
-    //
-    // });
-    // this.$el.find("textarea").val("").focus();
+  searchFlight: function(e) {
+    var toInput = this.$el.find("#to").val();
+    var fromInput = this.$el.find("#from").val();
+    var result1 = app.flights.where({departure: fromInput, destination: toInput});
+    var result = app.flights.where({});
+    console.log(result1);
+    $("#flights").html("");
+    _.each(result1, function(result) {
+      var sv = new app.FlightView({
+        model: result
+      });
+      sv.render();
+     });
   },
 
   checkForEnter: function(e) {

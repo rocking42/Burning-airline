@@ -16,16 +16,16 @@ app.FlightView = Backbone.View.extend({
   }
 });
 
-var createFlightViews = function() {
-  flights.each(function(flight) {
-    var fv = new app.FlightView({
-      model: flight
-    });
-    sv.render();
-  });
-  // take the collection of all secrets
-  // for every secret in the collection
-  // create a new instance of the app
-  // make sure to provide the current model
-  // call render
-};
+// var createFlightViews = function() {
+//   flights.each(function(flight) {
+//     var fv = new app.FlightView({
+//       model: flight
+//     });
+//     sv.render();
+//   });
+//   // take the collection of all secrets
+//   // for every secret in the collection
+//   // create a new instance of the app
+//   // make sure to provide the current model
+//   // call render
+// };
