@@ -9,10 +9,7 @@ $(document).ready(function() {
   });
 
   app.reservations = new app.Reservations();
-  app.reservations.fetch().done(function() {
-
-  }
-  );
+  // app.reservations.fetch();
 
   app.airplanes = new app.Airplanes();
   app.airplanes.fetch();

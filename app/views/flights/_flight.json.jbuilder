@@ -11,6 +11,7 @@ json.all_seats flight.reservations do |reservation|
   json.user_id reservation.user_id
   json.seat_user reservation.user.name if reservation.user
   json.booked reservation.booked
+  json.reservation_id reservation.id
 end
 
 json.url flight_url(flight, format: :json)
