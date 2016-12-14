@@ -6,12 +6,14 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= render 'layouts/navbar' %>
 
+<main>
 <div class="container">
 
   <% flash.each do |message_type, message|  %>
@@ -21,7 +23,7 @@
 <%= yield %>
 
 </div>
-
+</main>
 <%= render 'layouts/footer' %>
 
 </body>

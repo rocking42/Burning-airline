@@ -1,21 +1,20 @@
 div.seatCharts-container {
 	/*min-width: 700px;*/
+	background-image: url("/app/assets/images/fire.jpg");
 }
 div.seatCharts-cell {
-
-	height: 16px;
-	width: 16px;
+	background-image: url("app/assets/images/seat-available.png");
+	height: 40px;
+	width: 40px;
 	margin: 3px;
 	float: left;
 	text-align: center;
 	outline: none;
 	font-size: 13px;
 	line-height:16px;
-	color: blue;
 
 }
 div.seatCharts-seat {
-	background-color: green;
 	color: white;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -24,6 +23,7 @@ div.seatCharts-seat {
 }
 div.seatCharts-seat:focus {
 	border: none;
+	cursor: pointer;
 }
 /*
 .seatCharts-seat:focus {
@@ -52,10 +52,11 @@ div.seatCharts-seat.focused {
 
 div.seatCharts-seat.available {
 	background-color: green;
+	background-image: url("app/assets/images/seat-available.png");
 }
 
 div.seatCharts-seat.unavailable {
-	background-color: red;
+	background-color: red; p
 	cursor: not-allowed;
 }
 
