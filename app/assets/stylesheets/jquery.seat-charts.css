@@ -1,9 +1,9 @@
 div.seatCharts-container {
 	/*min-width: 700px;*/
-	background-image: url("/app/assets/images/fire.jpg");
+	/*background-image: url("/app/assets/images/fire.jpg");*/
 }
 div.seatCharts-cell {
-	background-image: url("app/assets/images/seat-available.png");
+	/*background-image: url("app/assets/images/seat-available.png");*/
 	height: 40px;
 	width: 40px;
 	margin: 3px;
@@ -52,7 +52,7 @@ div.seatCharts-seat.focused {
 
 div.seatCharts-seat.available {
 	background-color: green;
-	background-image: url("app/assets/images/seat-available.png");
+	/*background-image: url("app/assets/images/seat-available.png");*/
 }
 
 div.seatCharts-seat.unavailable {
