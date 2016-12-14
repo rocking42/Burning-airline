@@ -16,7 +16,8 @@ app.Router = Backbone.Router.extend({
     appView.render();
   },
   showFlight: function(params) {
-    var seatView = new app.SeatView();
+    var flight = app.flights.get(parseInt(params));
+    var seatView = new app.SeatView({model: flight});
     seatView.render();
 
   },
