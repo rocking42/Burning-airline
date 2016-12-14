@@ -11,7 +11,7 @@ app.FlightView = Backbone.View.extend({
     var airType = this.model.get("airType");
     var flight_id = this.model.get("id");
     var date = new Date(this.model.get("date"));
-    // this.$el.html(${dep} ${dest} ${seats} ${flight_num} ${airType} ${date} <a href="/app#flights/${flight_id}">Select seat</a>);
+    this.$el.html(dep + " " + dest + " " + seats + flight_num + " " + airType + " " + date + " " + "<a href=/app#flights/" + flight_id + ">Select seat</a>");
     this.$el.prependTo("#flights");
   }
 });
