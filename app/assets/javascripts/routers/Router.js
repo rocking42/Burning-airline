@@ -4,6 +4,8 @@ var app = app || {};
 app.Router = Backbone.Router.extend({
   routes: {
     '': "initializeFlightApp",
+    "flights/:id" : "showFlight",
+    "flights": "showFlight",
     "*error": "error"
   },
   // From here it is controllers and actions
@@ -13,7 +15,13 @@ app.Router = Backbone.Router.extend({
 
     appView.render();
   },
+  showFlight: function(params) {
+    var seatView = new app.SeatView();
+    seatView.render();
+
+  },
   error: function() {
     console.log("wrong");
   }
+
 });

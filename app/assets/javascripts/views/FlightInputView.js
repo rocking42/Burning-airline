@@ -4,7 +4,7 @@ app.FlightInputView = Backbone.View.extend({
   el: "#flightForm",
   // attach events
   events: {
-    'click button': 'searchFlight'
+    'click #findFlight': 'searchFlight'
   },
   // We select an element (or create an element)
   // Do this by using el or tagname
