@@ -214,7 +214,7 @@ div.seatCharts-seat:focus {
 */
 
 div.seatCharts-space {
-
+color: white;
 }
 div.seatCharts-row {
 	height: 50px;
@@ -225,7 +225,7 @@ div.seatCharts-row:after {
 }
 
 div.seatCharts-seat.selected {
-	background-color: aqua;
+	background-color: dodgerblue;
 }
 
 div.seatCharts-seat.focused {
