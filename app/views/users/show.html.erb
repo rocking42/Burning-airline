@@ -1,3 +1,6 @@
 <h1>Welcome, <%=@user.name%></h1>
-<p>Your Current Bookings:
-<%=@user.reservations%></p>
+<p>Your Current Bookings:</p>
+<% @user.reservations.each do |booking|%>
+  <p><%= booking.flight.date.to_s(:short) %> <%= booking.seat_num %> <%= booking.flight.departure %> - <%= booking.flight.destination %> </p>
+
+<% end %>

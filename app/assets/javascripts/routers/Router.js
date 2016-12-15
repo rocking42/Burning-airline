@@ -21,7 +21,7 @@ app.Router = Backbone.Router.extend({
     app.reservations.fetch().done(function() {
       var flight = app.flights.get(parseInt(params));
       var seatView = new app.SeatView({model: flight});
-      var seatInputView = new app.SeatInputView();
+      var seatInputView = new app.SeatInputView({model: flight});
       seatInputView.render();
       seatView.render();
     });
@@ -30,7 +30,7 @@ app.Router = Backbone.Router.extend({
     app.reservations.fetch().done(function() {
       var flight = app.flights.get(parseInt(params));
       var seatView = new app.SeatView({model: flight});
-      var seatInputView = new app.SeatInputView();
+      var seatInputView = new app.SeatInputView({model: flight});
       seatInputView.render();
       seatView.render();
     });

@@ -11,6 +11,7 @@ app.AppView = Backbone.View.extend({
     // set the html of this.$el
 
     var secretInputView = new app.FlightInputView();
+
     secretInputView.render();
   }
 

@@ -1,5 +1,4 @@
 <div id="app">
-  App loaded within this
 </div>
 <div id="seatInput">
 
@@ -25,18 +24,41 @@
 </script>
 
 <script id="SeatViewTemplate" type="html/template">
-  Seats should go here
+  <h3>Quick book your flight*</h3>
+  <p>*Seat may be booked for you</p>
   <div id="seat-map">
 
   </div>
+
 </script>
 
 <script id="SeatInputViewTemplate" type="html/template">
-  <div id="seatDisplay">
 
+<div class="demo-box">
+<div class="flight-info">
+  <div class="segments">
+    <div class="segment departure">
+      <time>06:30</time>
+      <span class="airport"><%%= departure %></span>
+    </div>
+    <div class="divider"><span class="plane"></span></div>
+    <div class="divider adaptive">
+    <span class="plane"></span>
+    </div>
+    <div class="segment destination">
+      <time>11:40</time>
+      <span class="airport"><%%= destination %></span>
+    </div>
   </div>
+</div>
+<div class="flight-duration">
+8h 40min Length of trip
+</div>
   <div id="buttonCont">
     <button id="sendData">Click to fly</button>
     <input type="hidden" value="<%= @current_user.id %>"/>
+  </div>
+  <div id="seatDisplay">
+
   </div>
 </script>

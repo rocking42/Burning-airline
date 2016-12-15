@@ -11,7 +11,7 @@ app.SeatView = Backbone.View.extend({
   selectFlight: function(e) {
     var seatNum = app.reservations.get(e.toElement.id).toJSON().seat_num;
     var seatId = app.reservations.get(e.toElement.id).toJSON().id;
-    $("#seatDisplay").html("Seat:" + "<span id=" + seatId +">" + seatNum + "</span>");
+    $("#seatDisplay").html("Seat:" + "<span class='flying' id=" + seatId +">" + seatNum + "</span>");
   },
 
   render: function() {
