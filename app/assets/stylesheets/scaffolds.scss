@@ -202,7 +202,9 @@ body {
 
 
 .sky {
-  height: 100%;
+  width: 268vh;
+  margin-left: -220px;
+  height: 100vh;
   background: #007fd5;
   position: relative;
   overflow: hidden;
@@ -414,8 +416,17 @@ svg {
 /*Paper Plane: Container*/
 .plane-container {
   width: 200px;
-  margin: 300px auto;
-  z-index: 3;
+   z-index: 3;
+   margin: 266px 1px 1px 661px;
+
+}
+
+#nav-mobile {
+  line-height: 61px;
+}
+
+.nav-link1 {
+  font-size: 31px;
 }
  /*Paper Plane: Image*/
 .plane {
@@ -678,7 +689,7 @@ svg {
 
 
 #appName {
-  font-family: 'Creepster', cursive;
+  font-family: monospace;
   color: rgb(240, 6, 6);
   font-size: 36px;
 }

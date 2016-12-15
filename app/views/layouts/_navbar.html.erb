@@ -1,21 +1,21 @@
-<div class="navbar-fixed col m12">
+<!-- <div class="navbar-fixed col m12"> -->
   <nav class="fucking-awesome">
     <div class="nav-wrapper">
       <% if @current_user %>
-        <%= link_to "TOO MANY CONNECTIONS", start_app_path, class: "left brand-logo hide-on-med-and-down" %>
+        <%= link_to "TOO MANY CONNECTIONS", start_app_path, class: "brand-logo" %>
       <% else %>
-        <%= link_to "TOO MANY CONNECTIONS", root_url, class: "left brand-logo hide-on-med-and-down" %>
+        <%= link_to "TOO MANY CONNECTIONS", root_url, class: "brand-logo"%>
       <% end %>
-      <ul id="nav-mobile" class="right">
+      <ul id="nav-mobile" class="right ">
         <% if @current_user.blank? %>
           <li><%= link_to "Sign Up", new_user_path %></li>
           <li><%= link_to "Login", login_path %></li>
         <% end %>
         <% if @current_user.present? %>
-          <li><%= link_to @current_user.name.capitalize, @current_user %></li>
-          <li><%= link_to 'Logout', login_path, method: :delete %></li>
+          <li><%= link_to @current_user.name.capitalize, @current_user, class: "nav-link1" %></li>
+          <li><%= link_to 'Logout', login_path, method: :delete, class: "nav-link1" %></li>
         <% end %>
       </ul>
     </div>
   </nav>
-</div>
+<!-- </div> -->
