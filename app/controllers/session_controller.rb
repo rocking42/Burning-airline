@@ -8,7 +8,7 @@ class SessionController < ApplicationController
     if @user.present? && @user.authenticate( params["password"])
       flash[:success] = "You successfully logged in"
       session[:user_id] = @user.id
-      redirect_to @user
+      redirect_to start_app_path
     else
       flash[:error] = "Password or email was incorrect"
       render 'new'

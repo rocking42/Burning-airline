@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:create] = "Account created successfully"
-      redirect_to @user
+      redirect_to start_app_path
     else
       render 'new'
     end

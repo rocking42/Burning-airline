@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/app' => 'flights#app', as: 'start_app'
   resources :users
 
-  root 'pages#home'
+  root 'pages#landing'
 
   get 'pages/about'
 
