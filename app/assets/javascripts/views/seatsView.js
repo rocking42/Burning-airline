@@ -32,7 +32,7 @@ app.SeatView = Backbone.View.extend({
           count = 0;
         }
         else if (this.model.toJSON().all_seats[i].booked === true) {
-          result += "c";
+          result += "c[," + this.model.toJSON().all_seats[i].seat_user + "]";
           count += 1;
         }
         else {
